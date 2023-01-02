@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="225dp"
+    android:background="@color/app_light_blue"
+    android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/navDrawerImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ars_logo_bg_white" />
+
+    <TextView
+        android:id="@+id/navDrawerTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navDrawerImage"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="ARS Technologies"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navDrawerTv1"
+        android:text="@string/ars_website"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="-3dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>
