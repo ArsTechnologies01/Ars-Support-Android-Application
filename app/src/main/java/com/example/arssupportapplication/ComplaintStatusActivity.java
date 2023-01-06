@@ -3,25 +3,25 @@ package com.example.arssupportapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.Objects;
 
-public class ServicesActivity extends AppCompatActivity {
+public class ComplaintStatusActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_services);
+        setContentView(R.layout.activity_complaint_status);
 
         /* --------------Hooks--------------- */
 
-        toolbar = findViewById(R.id.servicesScreenToolbar);
+        toolbar = findViewById(R.id.ComplaintStatusScreenToolbar);
 
 
         /* --------------Toolbar--------------- */
@@ -30,28 +30,14 @@ public class ServicesActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+        /* --------------Handle onClicks on Back Button------------------- */
 
-        /* --------------Handle onClicks on the card views------------------- */
-
-        findViewById(R.id.complaintsCardView).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ServicesActivity.this, complaintActivity.class));
+                startActivity(new Intent(ComplaintStatusActivity.this, MainActivity.class));
             }
         });
-        findViewById(R.id.repairingCardView).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        findViewById(R.id.warrantyCardView).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
     }
 
     @Override
