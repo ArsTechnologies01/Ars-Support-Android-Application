@@ -53,6 +53,7 @@ public class complaintActivity extends AppCompatActivity {
         findViewById(R.id.lodgeComplaintButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(complaintActivity.this,NewComplaintActivity.class));
             }
         });
 
