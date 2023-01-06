@@ -14,10 +14,9 @@ import java.util.Objects;
 public class NewComplaintActivity extends AppCompatActivity {
 
 
-
-    String[] Groups={"Group 1","Group 2","Group 3","Group 4","Group 5"};
-    String[] CategoryS={"Category 1","Category 2","Category 3","Category 4","Category 5"};
-    String[] Products={"Product 1","Product 2","Product 3","Product 4","Product 5"};
+    String[] Groups = {"Group 1", "Group 2", "Group 3", "Group 4", "Group 5"};
+    String[] CategoryS = {"Category 1", "Category 2", "Category 3", "Category 4", "Category 5"};
+    String[] Products = {"Product 1", "Product 2", "Product 3", "Product 4", "Product 5"};
 
 
     AutoCompleteTextView GroupAutoCompleteTV;
@@ -29,6 +28,7 @@ public class NewComplaintActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterProduct;
 
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +36,9 @@ public class NewComplaintActivity extends AppCompatActivity {
 
         /* --------------Hooks--------------- */
         toolbar = findViewById(R.id.NewComplaintScreenToolbar);
-        GroupAutoCompleteTV=findViewById(R.id.Group_Auto_Complete_TV);
-        SubCategoryAutoCompleteTV=findViewById(R.id.Sub_Category_Auto_Complete_TV);
-        ProductAutoCompleteTV=findViewById(R.id.Product_Auto_Complete_TV);
+        GroupAutoCompleteTV = findViewById(R.id.Group_Auto_Complete_TV);
+        SubCategoryAutoCompleteTV = findViewById(R.id.Sub_Category_Auto_Complete_TV);
+        ProductAutoCompleteTV = findViewById(R.id.Product_Auto_Complete_TV);
 
         /* --------------Toolbar--------------- */
         setSupportActionBar(toolbar);
@@ -46,14 +46,14 @@ public class NewComplaintActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /* --------------Group--------------- */
-        adapterGroup= new ArrayAdapter<String>(this,R.layout.dropdown,Groups);
+        adapterGroup = new ArrayAdapter<String>(this, R.layout.dropdown, Groups);
         GroupAutoCompleteTV.setAdapter(adapterGroup);
 
         /* --------------Category--------------- */
-        adapterCategory= new ArrayAdapter<String>(this,R.layout.dropdown,CategoryS);
+        adapterCategory = new ArrayAdapter<String>(this, R.layout.dropdown, CategoryS);
         SubCategoryAutoCompleteTV.setAdapter(adapterCategory);
         /* --------------Product--------------- */
-        adapterProduct= new ArrayAdapter<String>(this,R.layout.dropdown,Products);
+        adapterProduct = new ArrayAdapter<String>(this, R.layout.dropdown, Products);
         ProductAutoCompleteTV.setAdapter(adapterProduct);
 
         /* --------------Handle onClicks on  Button------------------- */
@@ -65,6 +65,7 @@ public class NewComplaintActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

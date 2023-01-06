@@ -13,6 +13,7 @@ import java.util.Objects;
 public class ComplaintStatusActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -23,14 +23,15 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
-        tools:listitem="@layout/complaintcustomlayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/complaintScreenToolbar">
+        app:layout_constraintTop_toBottomOf="@id/complaintScreenToolbar"
+        tools:listitem="@layout/complaintcustomlayout">
 
     </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/lodgeComplaintButton"
         style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,8 +49,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/complaintRecyclerView"
-        app:layout_constraintVertical_bias="0.8"
-        android:id="@+id/lodgeComplaintButton"/>
+        app:layout_constraintVertical_bias="0.8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

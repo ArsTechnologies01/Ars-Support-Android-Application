@@ -19,6 +19,7 @@ public class complaintActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,15 +36,15 @@ public class complaintActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ArrayList<ComplaintModel> list = new ArrayList<>();
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101","Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
+        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
 
-        ComplaintAdapter adapter = new ComplaintAdapter(list,this);
+        ComplaintAdapter adapter = new ComplaintAdapter(list, this);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -53,11 +54,12 @@ public class complaintActivity extends AppCompatActivity {
         findViewById(R.id.lodgeComplaintButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(complaintActivity.this,NewComplaintActivity.class));
+                startActivity(new Intent(complaintActivity.this, NewComplaintActivity.class));
             }
         });
 
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
