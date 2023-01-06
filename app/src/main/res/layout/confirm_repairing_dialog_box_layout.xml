@@ -7,20 +7,21 @@
 
 
     <TextView
-    android:id="@+id/textView1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="60dp"
-    android:layout_marginTop="32dp"
-    android:layout_marginEnd="60dp"
-    android:fontFamily="@font/poppins_semibold"
-    android:text="Our team will connect"
-    android:textColor="@color/black"
-    android:textSize="18sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:ignore="MissingConstraints" />
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Our team will connect"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -34,8 +35,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -90,17 +91,17 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="@drawable/message_text_view"
         android:drawableStart="@drawable/call_svg"
+        android:drawablePadding="10dp"
+        android:hint="Contact Number"
         android:inputType="number"
         android:maxLength="10"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:ignore="MissingConstraints"
-        android:background="@drawable/message_text_view"
-        android:padding="10dp"
-        android:hint="Contact Number"
-        android:drawablePadding="10dp"/>
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Repairing_Confirm_Button"

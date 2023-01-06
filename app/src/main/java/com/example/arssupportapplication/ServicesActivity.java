@@ -42,13 +42,13 @@ public class ServicesActivity extends AppCompatActivity {
         findViewById(R.id.repairingCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ServicesActivity.this,RepairingActivity.class));
+                startActivity(new Intent(ServicesActivity.this, RepairingActivity.class));
             }
         });
         findViewById(R.id.warrantyCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ServicesActivity.this, WarrantyActivity.class));
             }
         });
 

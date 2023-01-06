@@ -41,8 +41,8 @@ public class RepairingActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.RepairingScreenToolbar);
         RepairingProductCategoryAutoCompleteTV = findViewById(R.id.Repairing_Product_Category_Auto_Complete_TV);
-        RepairingConfirmButton=dialog.findViewById(R.id.Repairing_Confirm_Button);
-        RepairingConfirmFinalButton=dialog1.findViewById(R.id.Repairing_Confirm_Final_Button);
+        RepairingConfirmButton = dialog.findViewById(R.id.Repairing_Confirm_Button);
+        RepairingConfirmFinalButton = dialog1.findViewById(R.id.Repairing_Confirm_Final_Button);
 
         /* --------------Toolbar--------------- */
         setSupportActionBar(toolbar);
@@ -60,7 +60,7 @@ public class RepairingActivity extends AppCompatActivity {
         findViewById(R.id.Click_To_Proceed_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               dialog.show();
+                dialog.show();
             }
         });
         /* --------------Handle onClicks on  DialogBox------------------- */
@@ -68,14 +68,14 @@ public class RepairingActivity extends AppCompatActivity {
         RepairingConfirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             dialog1.show();
+                dialog1.show();
             }
         });
         /* --------------Handle onClicks on  DialogBox1------------------- */
         RepairingConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RepairingActivity.this,MainActivity.class));
+                startActivity(new Intent(RepairingActivity.this, MainActivity.class));
             }
         });
     }

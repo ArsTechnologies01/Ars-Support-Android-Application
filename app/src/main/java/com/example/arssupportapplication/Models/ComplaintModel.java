@@ -1,7 +1,7 @@
 package com.example.arssupportapplication.Models;
 
 public class ComplaintModel {
-    private String ComplaintIdTV,ComplaintStatusTV,ComplaintDetailsTV;
+    private String ComplaintIdTV, ComplaintStatusTV, ComplaintDetailsTV;
 
     public ComplaintModel(String complaintIdTV, String complaintStatusTV, String complaintDetailsTV) {
         ComplaintIdTV = complaintIdTV;

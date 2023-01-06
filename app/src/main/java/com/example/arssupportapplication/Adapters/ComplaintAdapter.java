@@ -46,6 +46,7 @@ public class ComplaintAdapter extends RecyclerView.Adapter<ComplaintAdapter.Comp
 
     static class ComplaintViewHolder extends RecyclerView.ViewHolder {
         TextView complaintId, complaintDetails, complaintStatus;
+
         public ComplaintViewHolder(@NonNull View itemView) {
 
             super(itemView);
