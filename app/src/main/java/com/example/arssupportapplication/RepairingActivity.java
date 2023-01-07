@@ -72,7 +72,9 @@ public class RepairingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialog1.show();
+                dialog.dismiss();
             }
+
         });
 
         /* --------------Handle onClicks on  DialogBox Close Button------------------- */

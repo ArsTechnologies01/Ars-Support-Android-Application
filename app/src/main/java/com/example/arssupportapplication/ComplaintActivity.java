@@ -55,6 +55,7 @@ public class ComplaintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ComplaintActivity.this, NewComplaintActivity.class));
+                finish();
             }
         });
 
