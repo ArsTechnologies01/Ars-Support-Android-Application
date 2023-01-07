@@ -3,11 +3,14 @@ package com.example.arssupportapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.Objects;
 
@@ -29,16 +32,26 @@ public class NewComplaintActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
+    Button ComplaintConfirmFinalButton;
+    ImageButton ConfirmComplaintCloseIV;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_complaint);
+
+        /* --------------DialogBox--------------- */
+
+        Dialog ComplaintDialog = new Dialog(this);
+        ComplaintDialog.setContentView(R.layout.confirm_complaint_dialogbox_layout);
 
         /* --------------Hooks--------------- */
         toolbar = findViewById(R.id.NewComplaintScreenToolbar);
         GroupAutoCompleteTV = findViewById(R.id.Group_Auto_Complete_TV);
         SubCategoryAutoCompleteTV = findViewById(R.id.Sub_Category_Auto_Complete_TV);
         ProductAutoCompleteTV = findViewById(R.id.Product_Auto_Complete_TV);
+        ComplaintConfirmFinalButton = ComplaintDialog.findViewById(R.id.Complaint_Confirm_Final_Button);
+        ConfirmComplaintCloseIV = ComplaintDialog.findViewById(R.id.Confirm_Complaint_Close_IV);
 
         /* --------------Toolbar--------------- */
         setSupportActionBar(toolbar);
@@ -61,9 +74,30 @@ public class NewComplaintActivity extends AppCompatActivity {
         findViewById(R.id.AddNewComplaintButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewComplaintActivity.this, ComplaintStatusActivity.class));
+                ComplaintDialog.show();
             }
         });
+
+
+        /* --------------Handle onClicks on  dialogBox------------------- */
+
+        ComplaintConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewComplaintActivity.this, ComplaintActivity.class));
+            }
+        });
+
+        /* --------------Handle onClicks on  dialogBox Close Button------------------- */
+
+        ConfirmComplaintCloseIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewComplaintActivity.this, NewComplaintActivity.class));
+            }
+        });
+
+
     }
 
     @Override

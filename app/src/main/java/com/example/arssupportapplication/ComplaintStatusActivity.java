@@ -36,7 +36,7 @@ public class ComplaintStatusActivity extends AppCompatActivity {
         findViewById(R.id.BackButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ComplaintStatusActivity.this, MainActivity.class));
+                startActivity(new Intent(ComplaintStatusActivity.this, ComplaintActivity.class));
             }
         });
     }

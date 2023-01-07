@@ -5,8 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageButton
+        android:id="@+id/Confirm_Repairing_Close_IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/close_icon_shap"
+        android:padding="5dp"
+        android:src="@drawable/close_svg"
+        app:layout_constraintBottom_toTopOf="@id/confirm_Repairing_textView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
     <TextView
-        android:id="@+id/confirm_textView1"
+        android:id="@+id/confirm_Repairing_textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -20,7 +38,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/confirm_textView2"
+        android:id="@+id/confirm_Repairing_textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semibold"
@@ -29,11 +47,11 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_textView1"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_Repairing_textView1"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/confirm_textView3"
+        android:id="@+id/confirm_Repairing_textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -43,11 +61,11 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_Repairing_textView2"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/confirm_textView4"
+        android:id="@+id/confirm_Repairing_textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
@@ -56,7 +74,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_textView3"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_Repairing_textView3"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -73,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirm_textView4"
+        app:layout_constraintTop_toBottomOf="@id/confirm_Repairing_textView4"
         tools:ignore="MissingConstraints" />
 
     <View

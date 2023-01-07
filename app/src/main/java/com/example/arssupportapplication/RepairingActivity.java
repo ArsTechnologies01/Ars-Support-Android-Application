@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.Objects;
 
@@ -24,7 +25,8 @@ public class RepairingActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterProductCategory;
     Button RepairingConfirmButton;
     Button RepairingConfirmFinalButton;
-
+    ImageButton ConfirmContactRepairingCloseIV;
+    ImageButton ConfirmRepairingCloseIV;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +36,17 @@ public class RepairingActivity extends AppCompatActivity {
         /* --------------DialogBox--------------- */
         Dialog dialog = new Dialog(this);
         Dialog dialog1 = new Dialog(this);
-        dialog.setContentView(R.layout.confirm_repairing_dialog_box_layout);
-        dialog1.setContentView(R.layout.confirm_dailog_box_layout);
+        dialog.setContentView(R.layout.confirm_contact_repairing_dialog_box_layout);
+        dialog1.setContentView(R.layout.confirm_repairing_dailog_box_layout);
 
         /* --------------Hooks--------------- */
 
         toolbar = findViewById(R.id.RepairingScreenToolbar);
         RepairingProductCategoryAutoCompleteTV = findViewById(R.id.Repairing_Product_Category_Auto_Complete_TV);
         RepairingConfirmButton = dialog.findViewById(R.id.Repairing_Confirm_Button);
+        ConfirmContactRepairingCloseIV = dialog.findViewById(R.id.Confirm_Contact_Repairing_Close_IV);
         RepairingConfirmFinalButton = dialog1.findViewById(R.id.Repairing_Confirm_Final_Button);
-
+        ConfirmRepairingCloseIV = dialog1.findViewById(R.id.Confirm_Repairing_Close_IV);
         /* --------------Toolbar--------------- */
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
@@ -71,11 +74,33 @@ public class RepairingActivity extends AppCompatActivity {
                 dialog1.show();
             }
         });
+
+        /* --------------Handle onClicks on  DialogBox Close Button------------------- */
+
+        ConfirmContactRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(RepairingActivity.this, RepairingActivity.class));
+            }
+        });
+
         /* --------------Handle onClicks on  DialogBox1------------------- */
+
         RepairingConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RepairingActivity.this, MainActivity.class));
+            }
+        });
+
+        /* --------------Handle onClicks on  DialogBox1 Close Button------------------- */
+
+        ConfirmRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(RepairingActivity.this, RepairingActivity.class));
             }
         });
     }

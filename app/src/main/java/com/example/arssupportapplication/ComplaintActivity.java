@@ -15,7 +15,7 @@ import com.example.arssupportapplication.Models.ComplaintModel;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class complaintActivity extends AppCompatActivity {
+public class ComplaintActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     Toolbar toolbar;
@@ -54,7 +54,7 @@ public class complaintActivity extends AppCompatActivity {
         findViewById(R.id.lodgeComplaintButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(complaintActivity.this, NewComplaintActivity.class));
+                startActivity(new Intent(ComplaintActivity.this, NewComplaintActivity.class));
             }
         });
 
