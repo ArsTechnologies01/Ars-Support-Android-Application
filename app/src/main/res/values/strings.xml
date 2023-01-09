@@ -3,4 +3,8 @@
     <string name="ars_website">www.arstechnologies.in</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="login"><u>Login</u></string>
+    <string name="signUp"><u>Sign Up</u></string>
+    <string name="search_by_category"><u> Search by category</u></string>
+    <string name="temp_holder_text">Lorem ipsum dolor sit amet. Est debitis blanditiis ad iusto praesentium eos tempora eaque id ipsam dolorem ab commodi beatae eos possimus iure. Ut omnis aliquam a totam veniam aut ducimus quis aut vitae velit et molestiae temporibus! Est sint maiores ut pariatur quibusdam in sapiente esse. Et delectus omnis qui aliquam dolorem vel error saepe ut quos maxime qui quia quisquam qui error voluptatem sed dignissimos earum.</string>
 </resources>
