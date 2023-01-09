@@ -67,9 +67,10 @@
 
                 <ImageView
                     android:id="@+id/complaintsImageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/complaints_icon" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/complaints_icon"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -125,9 +126,10 @@
 
                 <ImageView
                     android:id="@+id/repairingImageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/repairing_icon" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/repairing_icon"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -183,9 +185,10 @@
 
                 <ImageView
                     android:id="@+id/warrantyImageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/warranty_icon" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/warranty_icon"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
