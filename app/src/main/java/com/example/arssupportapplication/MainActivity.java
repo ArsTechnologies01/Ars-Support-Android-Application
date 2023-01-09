@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         /* --------------Navigation Drawer--------------- */
-        toggle = new ActionBarDrawerToggle(this, drawerLayout,toolbar, R.string.open, R.string.close);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         findViewById(R.id.servicesCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ServicesActivity.class));
+                startActivity(new Intent(MainActivity.this, ServicesActivity.class));
             }
         });
         findViewById(R.id.productsCardView).setOnClickListener(new View.OnClickListener() {
@@ -70,14 +70,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.share){
-
+        if (item.getItemId() == R.id.share) {
 
 
             drawerLayout.closeDrawer(GravityCompat.START);
         }
-        if (item.getItemId() == R.id.rate){
-
+        if (item.getItemId() == R.id.rate) {
 
 
             drawerLayout.closeDrawer(GravityCompat.START);
