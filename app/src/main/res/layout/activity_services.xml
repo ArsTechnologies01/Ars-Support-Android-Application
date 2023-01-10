@@ -14,19 +14,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/back_icon" />
+        app:navigationIcon="@drawable/back_icon"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/complaintsCardView"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="2dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="2dp"
         android:elevation="15dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/servicesScreenToolbar">
 
         <LinearLayout
@@ -34,58 +34,52 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="20dp">
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center">
-
                 <TextView
                     android:id="@+id/complaintsTextview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
                     android:text="Complaints"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
-
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/complaintsTextview"
-                    android:layout_marginTop="-5dp"
-                    android:fontFamily="@font/poppins"
                     android:text="Write a complaint to us"
+                    android:textSize="12sp"
                     android:textColor="@color/black50"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/poppins"
+                    android:layout_below="@id/complaintsTextview"
+                    android:layout_marginTop="-5dp"/>
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|end">
-
                 <ImageView
                     android:id="@+id/complaintsImageView"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/complaints_icon"/>
-
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <androidx.cardview.widget.CardView
         android:id="@+id/repairingCardView"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="15dp"
         android:elevation="15dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/complaintsCardView">
 
         <LinearLayout
@@ -93,58 +87,52 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="20dp">
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center">
-
                 <TextView
                     android:id="@+id/repairingTextview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
                     android:text="Repairing"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
-
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/repairingTextview"
-                    android:layout_marginTop="-5dp"
-                    android:fontFamily="@font/poppins"
                     android:text="Ask for repairing"
+                    android:textSize="12sp"
                     android:textColor="@color/black50"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/poppins"
+                    android:layout_below="@id/repairingTextview"
+                    android:layout_marginTop="-5dp"/>
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|end">
-
                 <ImageView
                     android:id="@+id/repairingImageView"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/repairing_icon"/>
-
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <androidx.cardview.widget.CardView
         android:id="@+id/warrantyCardView"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="15dp"
         android:elevation="15dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/repairingCardView">
 
         <LinearLayout
@@ -152,43 +140,38 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="20dp">
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center">
-
                 <TextView
                     android:id="@+id/warrantyTextview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
                     android:text="Warranty"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
-
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/warrantyTextview"
-                    android:layout_marginTop="-5dp"
-                    android:fontFamily="@font/poppins"
                     android:text="Check for warranty"
+                    android:textSize="12sp"
                     android:textColor="@color/black50"
-                    android:textSize="12sp" />
+                    android:fontFamily="@font/poppins"
+                    android:layout_below="@id/warrantyTextview"
+                    android:layout_marginTop="-5dp"/>
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|end">
-
                 <ImageView
                     android:id="@+id/warrantyImageView"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/warranty_icon"/>
-
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

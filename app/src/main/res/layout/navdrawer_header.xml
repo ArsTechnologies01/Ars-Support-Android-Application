@@ -23,16 +23,15 @@
         android:text="ARS Technologies"
         android:textColor="@color/white"
         android:textSize="18sp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/navDrawerTv1"
+        android:text="@string/ars_website"
         android:layout_marginStart="24dp"
         android:layout_marginTop="-3dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/ars_website"
+        android:textSize="12sp"
         android:textColor="@color/white"
-        android:textSize="12sp" />
+        android:layout_marginBottom="5dp"/>
 
 </RelativeLayout>

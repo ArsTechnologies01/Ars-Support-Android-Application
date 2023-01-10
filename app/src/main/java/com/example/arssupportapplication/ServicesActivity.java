@@ -3,16 +3,15 @@ package com.example.arssupportapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.Objects;
 
 public class ServicesActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,19 +34,19 @@ public class ServicesActivity extends AppCompatActivity {
         findViewById(R.id.complaintsCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ServicesActivity.this, ComplaintActivity.class));
+
             }
         });
         findViewById(R.id.repairingCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ServicesActivity.this, RepairingActivity.class));
+
             }
         });
         findViewById(R.id.warrantyCardView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ServicesActivity.this, WarrantyActivity.class));
+
             }
         });
 

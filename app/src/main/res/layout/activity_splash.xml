@@ -5,21 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
-
+    
     <ImageView
         android:id="@+id/splashActivityLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:src="@drawable/ars_logo_bg_white"
         android:layout_centerInParent="true"
-        android:layout_margin="25dp"
-        android:src="@drawable/ars_logo_bg_white" />
-
+        android:layout_margin="25dp"/>
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/splashActivityLogo"
+        android:visibility="visible"
         android:layout_centerInParent="true"
-        android:indeterminateTint="@color/app_light_blue"
-        android:visibility="visible" />
+        android:indeterminateTint="@color/app_light_blue"/>
 
 </RelativeLayout>
