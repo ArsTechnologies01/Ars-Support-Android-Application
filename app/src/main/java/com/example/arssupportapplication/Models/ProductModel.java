@@ -1,4 +1,4 @@
-package com.example.arssupportapplication;
+package com.example.arssupportapplication.Models;
 
 public class ProductModel {
     String name;

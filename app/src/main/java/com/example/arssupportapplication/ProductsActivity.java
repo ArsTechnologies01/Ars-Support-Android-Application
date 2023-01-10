@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.arssupportapplication.Adapters.ProductAdapter;
+import com.example.arssupportapplication.Models.ProductModel;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
