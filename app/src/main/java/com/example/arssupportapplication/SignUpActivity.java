@@ -46,7 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if (!validateName() | !validateEmail() | !validatePhoneNumber() | !validatePassword() | !validateConfirmPassword()) {
                     return;
                 }
-                if (!Objects.requireNonNull(password.getText()).toString().equals(Objects.requireNonNull(confirmPassword.getText()).toString())){
+                if (!Objects.requireNonNull(password.getText()).toString().equals(Objects.requireNonNull(confirmPassword.getText()).toString())) {
                     TextInputLayout passwordLayout = findViewById(R.id.confirmPasswordEditTextLayout);
                     passwordLayout.setError("Password does not match");
                     return;
@@ -75,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
         if (val.isEmpty()) {
             email.setError("Cannot be empty!");
             return false;
-        }else if (!Patterns.EMAIL_ADDRESS.matcher(val).matches()){
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(val).matches()) {
             email.setError("Enter valid email");
             return false;
         }
@@ -91,11 +91,11 @@ public class SignUpActivity extends AppCompatActivity {
         }
         return true;
     }
+
     private Boolean validatePassword() {
         TextInputLayout passwordLayout = findViewById(R.id.passwordEditTextLayout);
         String val = Objects.requireNonNull(passwordLayout.getEditText()).getText().toString();
-        String passwordMatcher = "^" +
-                "(?=.*[@#$%^&+=])" +     // at least 1 special character
+        String passwordMatcher = "^" + "(?=.*[@#$%^&+=])" +     // at least 1 special character
                 "(?=\\S+$)" +            // no white spaces
                 ".{4,}" +                // at least 4 characters
                 "$";
@@ -103,14 +103,15 @@ public class SignUpActivity extends AppCompatActivity {
         if (val.isEmpty()) {
             passwordLayout.setError("Cannot be empty!");
             return false;
-        }else if (!val.matches(passwordMatcher)){
+        } else if (!val.matches(passwordMatcher)) {
             passwordLayout.setError("Password is too weak");
             return false;
         }
         passwordLayout.setErrorEnabled(false);
         return true;
     }
-    private Boolean validateConfirmPassword(){
+
+    private Boolean validateConfirmPassword() {
         TextInputLayout passwordLayout = findViewById(R.id.confirmPasswordEditTextLayout);
         String val = Objects.requireNonNull(passwordLayout.getEditText()).getText().toString();
 

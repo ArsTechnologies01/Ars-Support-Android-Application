@@ -76,6 +76,7 @@ public class NewComplaintActivity extends AppCompatActivity {
         /* --------------Category--------------- */
         adapterCategory = new ArrayAdapter<String>(this, R.layout.dropdown, CategoryS);
         SubCategoryAutoCompleteTV.setAdapter(adapterCategory);
+
         /* --------------Product--------------- */
         adapterProduct = new ArrayAdapter<String>(this, R.layout.dropdown, Products);
         ProductAutoCompleteTV.setAdapter(adapterProduct);
@@ -106,7 +107,6 @@ public class NewComplaintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ComplaintDialog.dismiss();
-
             }
         });
 
@@ -115,7 +115,6 @@ public class NewComplaintActivity extends AppCompatActivity {
         ComplaintConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewComplaintActivity.this, ComplaintActivity.class));
                 ComplaintDialog1.dismiss();
                 finish();
             }
@@ -127,10 +126,9 @@ public class NewComplaintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ComplaintDialog1.dismiss();
+                finish();
             }
         });
-
-
     }
 
     @Override

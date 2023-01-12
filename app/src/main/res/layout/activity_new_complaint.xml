@@ -40,8 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             android:hint="Select Group"
             app:layout_constraintTop_toBottomOf="@id/NewComplaintIdTV"
             tools:ignore="MissingConstraints">
@@ -62,8 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             android:hint="Select Category"
             app:layout_constraintTop_toBottomOf="@id/Select_Group_TVInput_Layout"
             tools:ignore="MissingConstraints">
@@ -83,8 +83,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             android:hint="Select Product"
             app:layout_constraintTop_toBottomOf="@id/Select_Sub_Category_TVInput_Layout"
             tools:ignore="MissingConstraints">
@@ -98,38 +98,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Contact_Number_Input_Layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="10dp"
-            android:hint="Contact Number"
-            app:layout_constraintTop_toBottomOf="@id/Select_Product_TVInput_Layout"
-            tools:ignore="MissingConstraints">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Contact_number_Text_Input_Edit_Text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/call_svg"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins"
-                android:inputType="number"
-                android:maxLength="10" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <View
             android:id="@+id/NewComplaintHorizontalLine"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             android:background="@color/black50"
-            app:layout_constraintTop_toBottomOf="@+id/Contact_Number_Input_Layout"
+            app:layout_constraintTop_toBottomOf="@+id/Select_Product_TVInput_Layout"
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -138,8 +115,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             android:hint="Message"
             app:layout_constraintTop_toBottomOf="@id/NewComplaintHorizontalLine"
             tools:ignore="MissingConstraints">
@@ -160,8 +137,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
             android:backgroundTint="@color/app_light_blue"
             android:drawableEnd="@drawable/arrow_forward_white"
