@@ -21,7 +21,6 @@ public class ComplaintActivity extends AppCompatActivity {
     Toolbar toolbar;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,4 +70,5 @@ public class ComplaintActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
 }

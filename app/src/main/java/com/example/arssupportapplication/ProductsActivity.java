@@ -17,6 +17,7 @@ public class ProductsActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,25 +35,26 @@ public class ProductsActivity extends AppCompatActivity {
 
         /* --------------Recycler View-------------*/
         ArrayList<ProductModel> list = new ArrayList<>();
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        list.add(new ProductModel("Printer Name",R.drawable.fop_image1));
-        ProductAdapter adapter = new ProductAdapter(list,this);
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        list.add(new ProductModel("Printer Name", R.drawable.fop_image1));
+        ProductAdapter adapter = new ProductAdapter(list, this);
 
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

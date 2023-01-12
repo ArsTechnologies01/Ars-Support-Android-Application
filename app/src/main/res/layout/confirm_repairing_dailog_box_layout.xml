@@ -32,8 +32,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@+id/Confirm_Repairing_Close_IV"/>
+        app:layout_constraintTop_toBottomOf="@+id/Confirm_Repairing_Close_IV"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/confirm_Repairing_textView2"

@@ -10,6 +10,7 @@ import java.util.Objects;
 public class ProductDescriptionActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class ProductDescriptionActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

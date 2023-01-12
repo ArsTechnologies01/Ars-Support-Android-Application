@@ -126,7 +126,7 @@ public class RepairingActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(RepairingActivity.this,ServicesActivity.class));
+        startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
         finish();
     }
 }
