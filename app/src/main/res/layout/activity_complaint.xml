@@ -17,6 +17,7 @@
         app:navigationIcon="@drawable/back_icon" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
         android:id="@+id/complaintRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

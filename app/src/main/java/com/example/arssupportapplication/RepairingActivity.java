@@ -101,7 +101,7 @@ public class RepairingActivity extends AppCompatActivity {
         RepairingConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
+                dialog1.dismiss();
                 finish();
             }
         });
@@ -111,7 +111,7 @@ public class RepairingActivity extends AppCompatActivity {
         ConfirmRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
+                dialog1.dismiss();
                 finish();
             }
         });
@@ -124,9 +124,5 @@ public class RepairingActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
-        finish();
-    }
+
 }

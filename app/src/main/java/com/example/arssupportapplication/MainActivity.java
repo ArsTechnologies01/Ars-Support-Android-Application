@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             drawerLayout.closeDrawer(GravityCompat.START);
         }
+        if (item.getItemId() == R.id.logout) {
+
+
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
         return true;
     }
 

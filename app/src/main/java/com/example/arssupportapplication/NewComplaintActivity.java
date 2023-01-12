@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -38,6 +39,9 @@ public class NewComplaintActivity extends AppCompatActivity {
     ImageButton ConfirmContactComplaintCloseIV;
     ImageButton ConfirmComplaintCloseIV;
 
+    Dialog ComplaintDialog;
+    Dialog ComplaintDialog1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +49,12 @@ public class NewComplaintActivity extends AppCompatActivity {
 
         /* --------------DialogBox--------------- */
 
-        Dialog ComplaintDialog = new Dialog(this);
+        ComplaintDialog = new Dialog(this);
         ComplaintDialog.setContentView(R.layout.confirm_complaint_dialogbox_layout);
 
         /* --------------DialogBox1--------------- */
 
-        Dialog ComplaintDialog1 = new Dialog(this);
+        ComplaintDialog1 = new Dialog(this);
         ComplaintDialog1.setContentView(R.layout.confirm_complaint_final_dialogbox_layout);
 
         /* --------------Hooks--------------- */
@@ -130,6 +134,7 @@ public class NewComplaintActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     public boolean onSupportNavigateUp() {
