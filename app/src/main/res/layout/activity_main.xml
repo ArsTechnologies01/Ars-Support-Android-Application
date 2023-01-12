@@ -12,7 +12,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -341,6 +342,13 @@
 
 
             </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frequentlyOrderedProduct_2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
@@ -349,6 +357,7 @@
         android:id="@+id/navView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:overScrollMode="never"
         android:layout_gravity="start"
         app:headerLayout="@layout/navdrawer_header"
         app:menu="@menu/menu_items" />

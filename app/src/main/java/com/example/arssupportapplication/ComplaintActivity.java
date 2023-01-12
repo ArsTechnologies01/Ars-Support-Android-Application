@@ -39,15 +39,6 @@ public class ComplaintActivity extends AppCompatActivity {
         ArrayList<ComplaintModel> list = new ArrayList<>();
         list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
         list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
-        list.add(new ComplaintModel("Complaint Id #101", "Response Pending", "Details"));
 
         ComplaintAdapter adapter = new ComplaintAdapter(list, this);
         recyclerView.setAdapter(adapter);
