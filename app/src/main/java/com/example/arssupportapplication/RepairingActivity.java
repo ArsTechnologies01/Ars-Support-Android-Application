@@ -19,14 +19,19 @@ public class RepairingActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     String[] ProductCategory = {"Category 1", "Category 2", "Category 3", "Category 4", "Category 5"};
+    String[] ProblemCategory = {"Problem 1", "Problem 2", "Problem 3", "Problem 4", "Problem 5"};
 
     AutoCompleteTextView RepairingProductCategoryAutoCompleteTV;
+    AutoCompleteTextView RepairingSelectProblemAutoCompleteTV;
 
     ArrayAdapter<String> adapterProductCategory;
+    ArrayAdapter<String> adapterProblemCategory;
+
     Button RepairingConfirmButton;
     Button RepairingConfirmFinalButton;
     ImageButton ConfirmContactRepairingCloseIV;
     ImageButton ConfirmRepairingCloseIV;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,10 @@ public class RepairingActivity extends AppCompatActivity {
         /* --------------Hooks--------------- */
 
         toolbar = findViewById(R.id.RepairingScreenToolbar);
+
         RepairingProductCategoryAutoCompleteTV = findViewById(R.id.Repairing_Product_Category_Auto_Complete_TV);
+        RepairingSelectProblemAutoCompleteTV = findViewById(R.id.Repairing_Select_Problem_Auto_Complete_TV);
+
         RepairingConfirmButton = dialog.findViewById(R.id.Repairing_Confirm_Button);
         ConfirmContactRepairingCloseIV = dialog.findViewById(R.id.Confirm_Contact_Repairing_Close_IV);
         RepairingConfirmFinalButton = dialog1.findViewById(R.id.Repairing_Confirm_Final_Button);
@@ -56,7 +64,9 @@ public class RepairingActivity extends AppCompatActivity {
         adapterProductCategory = new ArrayAdapter<String>(this, R.layout.dropdown, ProductCategory);
         RepairingProductCategoryAutoCompleteTV.setAdapter(adapterProductCategory);
 
-
+        /* --------------Repairing_Problem_Category--------------- */
+        adapterProblemCategory = new ArrayAdapter<String>(this, R.layout.dropdown, ProblemCategory);
+        RepairingSelectProblemAutoCompleteTV.setAdapter(adapterProblemCategory);
 
         /* --------------Handle onClicks on  Button------------------- */
 
@@ -82,8 +92,7 @@ public class RepairingActivity extends AppCompatActivity {
         ConfirmContactRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                startActivity(new Intent(RepairingActivity.this, RepairingActivity.class));
+                dialog.dismiss();
             }
         });
 
@@ -92,7 +101,8 @@ public class RepairingActivity extends AppCompatActivity {
         RepairingConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RepairingActivity.this, MainActivity.class));
+                startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
+                finish();
             }
         });
 
@@ -101,8 +111,7 @@ public class RepairingActivity extends AppCompatActivity {
         ConfirmRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                startActivity(new Intent(RepairingActivity.this, RepairingActivity.class));
+                dialog1.dismiss();
             }
         });
     }

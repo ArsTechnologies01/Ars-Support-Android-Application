@@ -111,6 +111,42 @@
             app:layout_constraintTop_toBottomOf="@+id/Repairing_Brand_Details_TV" />
 
 
+        <TextView
+            android:id="@+id/Repairing_Select_Problem_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:padding="4dp"
+            android:text="Select Problem"
+            android:textColor="@color/black50"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Repairing_Brand_Details_EditText"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Repairing_Select_Problem_TInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Problem"
+            app:layout_constraintTop_toBottomOf="@id/Repairing_Select_Problem_TV"
+            tools:ignore="MissingConstraints">
+
+            <AutoCompleteTextView
+                android:id="@+id/Repairing_Select_Problem_Auto_Complete_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Repairing_Message_TInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -119,7 +155,7 @@
             android:layout_margin="24dp"
             android:hint="Message"
             app:hintTextColor="#4D000000"
-            app:layout_constraintTop_toBottomOf="@id/Repairing_Brand_Details_EditText"
+            app:layout_constraintTop_toBottomOf="@id/Repairing_Select_Problem_TInputLayout"
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText

@@ -82,7 +82,7 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/poppins_medium"
-        android:text="Confirm Repairing"
+        android:text="Back"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"

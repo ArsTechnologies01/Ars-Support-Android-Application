@@ -20,6 +20,8 @@ public class ComplaintActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Toolbar toolbar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +61,6 @@ public class ComplaintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ComplaintActivity.this, NewComplaintActivity.class));
-                finish();
             }
         });
 
