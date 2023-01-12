@@ -111,14 +111,22 @@ public class RepairingActivity extends AppCompatActivity {
         ConfirmRepairingCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog1.dismiss();
+                startActivity(new Intent(RepairingActivity.this, ServicesActivity.class));
+                finish();
             }
         });
+
     }
 
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(RepairingActivity.this,ServicesActivity.class));
+        finish();
     }
 }
