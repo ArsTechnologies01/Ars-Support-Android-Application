@@ -85,7 +85,6 @@ public class NewComplaintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NewComplaintActivity.this, ComplaintActivity.class));
-                finish();
             }
         });
 
@@ -94,7 +93,7 @@ public class NewComplaintActivity extends AppCompatActivity {
         ConfirmComplaintCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewComplaintActivity.this, NewComplaintActivity.class));
+                ComplaintDialog.dismiss();
 
             }
         });
