@@ -32,7 +32,10 @@ public class NewComplaintActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
+    Button ComplaintConfirmButton;
     Button ComplaintConfirmFinalButton;
+
+    ImageButton ConfirmContactComplaintCloseIV;
     ImageButton ConfirmComplaintCloseIV;
 
     @Override
@@ -45,14 +48,22 @@ public class NewComplaintActivity extends AppCompatActivity {
         Dialog ComplaintDialog = new Dialog(this);
         ComplaintDialog.setContentView(R.layout.confirm_complaint_dialogbox_layout);
 
+        /* --------------DialogBox1--------------- */
+
+        Dialog ComplaintDialog1 = new Dialog(this);
+        ComplaintDialog1.setContentView(R.layout.confirm_complaint_final_dialogbox_layout);
+
         /* --------------Hooks--------------- */
         toolbar = findViewById(R.id.NewComplaintScreenToolbar);
         GroupAutoCompleteTV = findViewById(R.id.Group_Auto_Complete_TV);
         SubCategoryAutoCompleteTV = findViewById(R.id.Sub_Category_Auto_Complete_TV);
         ProductAutoCompleteTV = findViewById(R.id.Product_Auto_Complete_TV);
-        ComplaintConfirmFinalButton = ComplaintDialog.findViewById(R.id.Complaint_Confirm_Final_Button);
-        ConfirmComplaintCloseIV = ComplaintDialog.findViewById(R.id.Confirm_Complaint_Close_IV);
 
+        ComplaintConfirmButton = ComplaintDialog.findViewById(R.id.Complaint_Confirm_Button);
+        ComplaintConfirmFinalButton = ComplaintDialog1.findViewById(R.id.Complaint_Confirm_Final_Button);
+
+        ConfirmContactComplaintCloseIV = ComplaintDialog.findViewById(R.id.Confirm_Contact_Complaint_Close_IV);
+        ConfirmComplaintCloseIV = ComplaintDialog1.findViewById(R.id.Confirm_Complaint_Close_IV);
         /* --------------Toolbar--------------- */
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
@@ -81,20 +92,41 @@ public class NewComplaintActivity extends AppCompatActivity {
 
         /* --------------Handle onClicks on  dialogBox------------------- */
 
-        ComplaintConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
+        ComplaintConfirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewComplaintActivity.this, ComplaintActivity.class));
+                ComplaintDialog1.show();
+                ComplaintDialog.dismiss();
             }
         });
 
         /* --------------Handle onClicks on  dialogBox Close Button------------------- */
 
-        ConfirmComplaintCloseIV.setOnClickListener(new View.OnClickListener() {
+        ConfirmContactComplaintCloseIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ComplaintDialog.dismiss();
 
+            }
+        });
+
+        /* --------------Handle onClicks on  dialogBox1------------------- */
+
+        ComplaintConfirmFinalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewComplaintActivity.this, ComplaintActivity.class));
+                ComplaintDialog1.dismiss();
+                finish();
+            }
+        });
+
+        /* --------------Handle onClicks on  dialogBox1 Close Button------------------- */
+
+        ConfirmComplaintCloseIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ComplaintDialog1.dismiss();
             }
         });
 
