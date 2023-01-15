@@ -3,6 +3,7 @@ package com.example.arssupportapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,26 +22,37 @@ public class NewComplaintActivity extends AppCompatActivity {
     String[] Groups = {"Group 1", "Group 2", "Group 3", "Group 4", "Group 5"};
     String[] CategoryS = {"Category 1", "Category 2", "Category 3", "Category 4", "Category 5"};
     String[] Products = {"Product 1", "Product 2", "Product 3", "Product 4", "Product 5"};
+    String[] Problems = {"Problems 1", "Problems 2", "Problems 3", "Problems 4", "Problems 5"};
 
 
     AutoCompleteTextView GroupAutoCompleteTV;
     AutoCompleteTextView SubCategoryAutoCompleteTV;
     AutoCompleteTextView ProductAutoCompleteTV;
+    AutoCompleteTextView ProblemAutoCompleteTV;
+
 
     ArrayAdapter<String> adapterGroup;
     ArrayAdapter<String> adapterCategory;
     ArrayAdapter<String> adapterProduct;
+    ArrayAdapter<String> adapterProblem;
+
 
     Toolbar toolbar;
+
 
     Button ComplaintConfirmButton;
     Button ComplaintConfirmFinalButton;
 
+
     ImageButton ConfirmContactComplaintCloseIV;
     ImageButton ConfirmComplaintCloseIV;
 
+
+
     Dialog ComplaintDialog;
     Dialog ComplaintDialog1;
+
+    @SuppressLint("MissingInflatedId")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +74,7 @@ public class NewComplaintActivity extends AppCompatActivity {
         GroupAutoCompleteTV = findViewById(R.id.Group_Auto_Complete_TV);
         SubCategoryAutoCompleteTV = findViewById(R.id.Sub_Category_Auto_Complete_TV);
         ProductAutoCompleteTV = findViewById(R.id.Product_Auto_Complete_TV);
+        ProblemAutoCompleteTV = findViewById(R.id.Problem_Auto_Complete_TV);
 
         ComplaintConfirmButton = ComplaintDialog.findViewById(R.id.Complaint_Confirm_Button);
         ComplaintConfirmFinalButton = ComplaintDialog1.findViewById(R.id.Complaint_Confirm_Final_Button);
@@ -84,6 +97,10 @@ public class NewComplaintActivity extends AppCompatActivity {
         /* --------------Product--------------- */
         adapterProduct = new ArrayAdapter<String>(this, R.layout.dropdown, Products);
         ProductAutoCompleteTV.setAdapter(adapterProduct);
+
+        /* --------------Problem--------------- */
+        adapterProblem = new ArrayAdapter<String>(this, R.layout.dropdown, Problems);
+        ProblemAutoCompleteTV.setAdapter(adapterProblem);
 
         /* --------------Handle onClicks on  Button------------------- */
 

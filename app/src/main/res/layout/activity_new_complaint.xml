@@ -56,7 +56,6 @@
                 tools:ignore="MissingConstraints" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Select_Sub_Category_TVInput_Layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -100,26 +99,27 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Contact_Number_Input_Layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:id="@+id/Select_Problem_TVInput_Layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="24dp"
-            android:hint="Contact Number"
+
+            android:hint="Select Problem"
             app:layout_constraintTop_toBottomOf="@id/Select_Product_TVInput_Layout"
             tools:ignore="MissingConstraints">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Contact_number_Text_Input_Edit_Text"
+            <AutoCompleteTextView
+                android:id="@+id/Problem_Auto_Complete_TV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/call_svg"
-                android:drawablePadding="10dp"
                 android:fontFamily="@font/poppins"
-                android:inputType="number"
-                android:maxLength="10" />
+                android:inputType="none" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <View
@@ -130,7 +130,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="24dp"
             android:background="@color/black50"
-            app:layout_constraintTop_toBottomOf="@+id/Contact_Number_Input_Layout"
+
+            app:layout_constraintTop_toBottomOf="@+id/Select_Problem_TVInput_Layout"
+
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.textfield.TextInputLayout
