@@ -48,10 +48,12 @@ public class NewComplaintActivity extends AppCompatActivity {
     ImageButton ConfirmComplaintCloseIV;
 
 
+
     Dialog ComplaintDialog;
     Dialog ComplaintDialog1;
 
     @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
